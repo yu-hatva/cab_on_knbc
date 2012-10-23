@@ -124,7 +124,7 @@ $okcnt = $ngcnt = 0;
 for($c=0; $c<$cchno; $c++) {
  $k = $chkAlgn[$c];
  if ($c < $cchno - 1 && $chkAlgn[$c + 1] == $k) {
-   $cans[$c] = 99;   # N/A
+   $rightAns[$c] = 99;   # N/A
    next;
  } else {
 
