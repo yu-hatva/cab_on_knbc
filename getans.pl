@@ -125,6 +125,7 @@ for($c=0; $c<$cchno; $c++) {
  $k = $chkAlgn[$c];
  if ($c < $cchno - 1 && $chkAlgn[$c + 1] == $k) {
    $rightAns[$c] = 99;   # N/A
+print "c $c in multispan\n";
    next;
  } else {
 
@@ -136,10 +137,14 @@ print "c $c k $k span $span cans $cans[$c] kansNow $kansNow\n";
    for($d=0; $d<$cchno; $d++) {
      if ($chkAlgn[$d] <= $kansNow && $kansNow < $chkAlgn[$d] + $chkSpan[$d]) {
        $cansNow = $d;
+       if ($d < $cchno - 1 && $chkAlgn[$d + 1] == $kansNow) {
+         print "%%%%%%%% WARNING ambiguous answer\n";
+         $cansNow = 99;
+       }
        last;
      }
    }
-   if ($cansNow == 99)
+   if ($cansNow == 99 && $c < $cchno - 1)
      { print "WARNING: cans not found for $d\n"; }
 
    $rightAns[$c] = $cansNow;

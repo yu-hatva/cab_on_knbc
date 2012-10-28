@@ -12,7 +12,7 @@ mkdir $dest/nogood
 cd $dir
 foreach xxx ( `ls -1` )
   cd $dir/$xxx
-  set files = ( `ls -1 | grep -v fileinfos` )
+  set files = ( `ls -1 | grep KN` )
   foreach yyy ( $files )
     mkdir $dest/$yyy
     cd $dir/$xxx
