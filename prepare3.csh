@@ -12,6 +12,7 @@ mkdir $dest/nogood
 cd $dir
 foreach xxx ( `ls -1` )
   cd $dir/$xxx
+   # in addition to 'fileinfo', one dir in KNBC has a dir named '2'
   set files = ( `ls -1 | grep KN` )
   foreach yyy ( $files )
     mkdir $dest/$yyy
