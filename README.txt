@@ -21,7 +21,7 @@ prepare3.cshの最初にある2行を、お使いの環境に合わせて適宜�
 
 とすると、コーパスに対して必要な前処理を行います。結果はワークdirの下のpreproced/ にできます。
 
-つづいて、driver3.cshの最初にある'wdir=...'の行を、prepare3.cshと同じに設定します。そうしてから
+つづいて、driver3.cshの最初にある'wdir=...'の行を、prepare3.cshと同じに設定します。また'CABBIN=...'の行をcabochaまたは係ろっとへのコマンドパスに変えます。そうしてから
 
  % ./driver3.csh
 
