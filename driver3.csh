@@ -1,5 +1,6 @@
 #!/bin/tcsh
 
+setenv KAKAROT_EVAL_INIT_FILE [WHERE kakeval.txt RESIDES]
 set CABBIN = [cabocha, or COMMAND PATH TO KAKAROT]
 set wdir = [YOUR WORK DIR, WHERE ALL THE SCRIPTS RESIDE]
 set dir = $wdir/preproced
